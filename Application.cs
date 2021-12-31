@@ -27,7 +27,30 @@ namespace BezaoAtmMachine
            
 
             if (language == Languages.English.ToString())
+
             {
+
+                Console.WriteLine("What will you like to do \n");
+                Console.WriteLine("1: PRESS 1 TO REGISTER");
+                Console.WriteLine("2: PRESS 2 TO WITHDRAW");
+                Console.WriteLine("3: PRESS 3 TO CHECK BALANCE");
+
+                int input = Int32.Parse( Console.ReadLine());
+                Console.WriteLine(input);
+                if(input == 1)
+                {
+
+                    Console.WriteLine("What is your full name? ");
+                    string fullname = Console.ReadLine();
+
+                    AtmUser atmUser = new AtmUser(fullname);
+                    Register.RegisterUser(atmUser);
+
+
+
+
+
+                }
                 Console.WriteLine("Please enter your 4 digit pin: ");
                 int Pin = Convert.ToInt32(AtmUser.RequestPIN());
 
